@@ -16,7 +16,8 @@ def contatos():
 
 @app.route("/user/<user_name>")
 def user(user_name):
-    return render_template("user.html")
+    data = {"user_name": user_name}
+    return render_template("user.html",data=data)
 
 
 if __name__ == "__main__":
