@@ -14,5 +14,10 @@ def contatos():
     return render_template("contact.html")
 
 
+@app.route("/user/<user_name>")
+def user(user_name):
+    return render_template("user.html")
+
+
 if __name__ == "__main__":
     app.run(debug=True)
