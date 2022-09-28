@@ -24,14 +24,17 @@
 </head>
 
 <body>
-    <!--[if lte IE 9]>
-      <p class="browserupgrade">
+    <!--
+    [if lte IE 9]>
+    <p class="browserupgrade">
         You are using an <strong>outdated</strong> browser. Please
         <a href="https://browsehappy.com/">upgrade your browser</a> to improve
         your experience and security.
-      </p>
-    <![endif]-->
+    </p>
+    <![endif]
+    -->
 
+    {% block content %}
     <!-- Preloader -->
     <div class="preloader">
         <div class="preloader-inner">
@@ -43,7 +46,6 @@
     </div>
     <!-- /End Preloader -->
 
-    {% block content %}
     <!-- Start Header Area -->
     <header class="header">
         <div class="navbar-area">
@@ -564,10 +566,12 @@
     <!--/ End Footer Area -->
     {% endblock %}
 
+    {% block scrolltop %}
     <!-- ========================= scroll-top ========================= -->
     <a href="#" class="scroll-top btn-hover">
         <i class="lni lni-chevron-up"></i>
     </a>
+    {% endblock %}
 
     <!-- ========================= JS here ========================= -->
     <script src="{{ url_for('static',filename='js/bootstrap.min.js') }}"></script>
